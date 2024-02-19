@@ -1,0 +1,19 @@
+.buttons-node {
+    .toggle-field {
+        margin-bottom: 1.25rem;
+    }
+
+    .new-button + .new-button {
+        margin-top: 1rem;
+    }
+
+    .add-button {
+        font-weight: 500;
+        line-height: 1.5rem;
+        letter-spacing: 0.025rem;
+        font-size: 0.875rem;
+        color: var(--blue);
+        cursor: pointer;
+        margin-top: 1rem;
+    }
+}

@@ -1,25 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { EditMessage } from './components/organisms/EditMessage';
+import { NavBar } from './components/molecules/NavBar';
+import { Header } from './components/atoms/Header';
+import { Canva } from './components/organisms/Canva';
+import { useSelector } from 'react-redux';
+import { RootState } from './lib/store';
+import '@/styles/globals.scss';
 
 function App() {
+  const activeTab = useSelector((state: RootState) => state.statesNode.activeTab.tab)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className='app-main'>
+      <NavBar />
+      <div className='dynamic-contents'>
+        <Header title='Create a Campaign'/>
+        <div className='main-contents'>
+          <EditMessage />
+          {activeTab === 'edit message' && (
+            <Canva />
+          )}
+        </div>
+      </div>
+    </main>
   );
 }
 

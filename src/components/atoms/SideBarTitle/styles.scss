@@ -1,0 +1,29 @@
+.side-bar-title {
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+
+    > div {
+        justify-content: center;
+        align-items: center;
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        background: var(--gray2);
+        cursor: pointer;
+
+        span {
+            position: absolute;
+            height: 2px;
+            width: 0.688rem;
+            background: var(--black-54);
+
+            &:first-of-type {
+                rotate: 45deg;
+            }
+            &:last-of-type {
+                rotate: -45deg;
+            }
+        }
+    }
+}

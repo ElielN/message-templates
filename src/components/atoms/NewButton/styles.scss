@@ -1,0 +1,46 @@
+.new-button {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+
+    > div {
+        width: 100%;
+    }
+
+    > div:first-of-type {
+        justify-content: space-between;
+        align-items: center;
+
+        font-size: 0.875rem;
+        line-height: 160%;
+        letter-spacing: 0.009rem;
+        font-weight: 500;
+        color: var(--black-87);
+
+        > img {
+            width: 1.5rem;
+            height: 1.5rem;
+            cursor: pointer;
+        }
+    }
+
+    > div:last-of-type {
+        align-items: center;
+        padding: 0.75rem 0.75rem;
+        gap: 0.625rem;
+        border-radius: var(--radius-big);
+        border: 1px solid var(--black-12);
+        background: var(--white);
+
+        font-size: 0.875rem;
+        line-height: 150%;
+        letter-spacing: 0.009rem;
+        color: var(--black-54);
+
+        input {
+            width: 100%;
+            border: none;
+            outline: none;
+        }
+    }
+}

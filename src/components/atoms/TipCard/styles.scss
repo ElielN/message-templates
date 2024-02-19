@@ -1,0 +1,51 @@
+.tip-card {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding: 1rem 1rem;
+    gap: 0.25rem;
+    border-radius: var(--radius);
+    background: var(--gray2);
+
+    &.disabled {
+        display: none;
+    }
+
+    > div {
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+
+        > div:first-of-type {
+            align-items: center;
+            gap: 0.5rem;
+
+            img {
+                width: 0.885rem;
+            }
+        }
+
+        > div:last-of-type {
+            justify-content: center;
+            align-items: center;
+            width: 0.875rem;
+            height: 0.875rem;
+            cursor: pointer;
+
+            span {
+                position: absolute;
+                width: 1.237rem;
+                height: 2px;
+                background: var(--black-54);
+
+                &:first-of-type {
+                    rotate: 45deg;
+                }
+
+                &:last-of-type {
+                    rotate: -45deg;
+                }
+            }
+        }
+    }
+}

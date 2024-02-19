@@ -1,0 +1,17 @@
+.upload-btn {
+    padding: 0.188rem 0.563rem;
+    border-radius: var(--radius-small);
+    border: 1px solid var(--blue-50);
+    background: transparent;
+    cursor: pointer;
+
+    color: var(--blue);
+    font-weight: 500;
+    line-height: 1.5rem;
+    letter-spacing: 0.025rem;
+    text-transform: uppercase;
+
+    input {
+        display: none;
+    }
+}
