@@ -14,7 +14,7 @@ export const MessageExample = () => {
         <div className='message-example'>
             <div>
                 <div>
-                    <img src={Message} alt="header image" />
+                    <img src={Message} alt="message example" />
                 </div>
                 Message Example
             </div>

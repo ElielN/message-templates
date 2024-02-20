@@ -31,7 +31,7 @@ export const EditMessage = () => {
                 <FooterNode />
                 <ButtonsNode />
             </div>
-            <div className='save-delete-buttons'>
+            <div>
                 <Button onClick={handleSave}>SAVE</Button>
                 <Button negative>DELETE</Button>
             </div>
