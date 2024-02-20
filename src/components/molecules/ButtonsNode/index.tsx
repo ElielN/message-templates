@@ -18,7 +18,8 @@ export const ButtonsNode = () => {
     return (
         <div className={`buttons-node node-default ${!buttonsNode.active ? 'disabled' : ''}`}>
             <ToggleField
-                icon={ButtonIcon} 
+                icon={ButtonIcon}
+                iconAlt="Add buttons"
                 tip="" 
                 title="Buttons"
                 toggleAction={() => dispatch(toggleNode('buttonsNode'))}

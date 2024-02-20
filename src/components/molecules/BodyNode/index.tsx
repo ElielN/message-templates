@@ -25,6 +25,7 @@ export const BodyNode = () => {
         <div className="body-node node-default">
             <RequiredField 
                 icon={LetterIcon}
+                iconAlt="Letter"
                 title="Body message"
                 tip=""
             />

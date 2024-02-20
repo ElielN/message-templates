@@ -15,7 +15,8 @@ export const HeaderNode = () => {
     return (
         <div className={`header-node node-default ${!nodeEnabled ? 'disabled' : ''}`}>
             <ToggleField 
-                icon={ImageIcon} 
+                icon={ImageIcon}
+                iconAlt="Add image header"
                 tip="" 
                 title="Header"
                 toggleAction={() => dispatch(toggleNode('headerNode'))}

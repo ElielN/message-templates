@@ -4,6 +4,7 @@ import './styles.scss'
 
 type ToggleFieldProps = {
     icon: string,
+    iconAlt: string,
     title: string,
     tip: string,
     toggleAction: () => void
@@ -11,6 +12,7 @@ type ToggleFieldProps = {
 
 export const ToggleField = ({
     icon,
+    iconAlt,
     title,
     tip,
     toggleAction
@@ -19,7 +21,7 @@ export const ToggleField = ({
     return (
         <div className="toggle-field">
             <div>
-                <img src={icon} alt="" />
+                <img src={icon} alt={iconAlt} />
                 <h2>{title}</h2>
                 <img src={Tip} alt="tooltip" />
             </div>

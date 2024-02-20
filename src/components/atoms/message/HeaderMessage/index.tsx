@@ -6,7 +6,7 @@ export const HeaderMessage = () => {
     const headerFile = useSelector((state: RootState) => state.statesNode.nodes.headerNode.file)
     return (
         <div className="header-message">
-            <img src={headerFile} alt="" />
+            <img src={headerFile} alt="header image message" />
             <div>Header</div>
         </div>
     )

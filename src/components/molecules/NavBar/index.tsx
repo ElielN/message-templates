@@ -26,13 +26,13 @@ export const NavBar = () => {
                 <div className='navbar-static-option'>
                     <img src={Logo} alt="" />
                 </div>
-                <NavBarOption icon={AvatarIcon} onClickAction={() => handleSelectOption('account')} border isSelected={activeTab === 'account'}/>
-                <NavBarOption icon={DashboardIcon} onClickAction={() => handleSelectOption('dashboard')} isSelected={activeTab === 'dashboard'}/>
-                <NavBarOption icon={MessageIcon} onClickAction={() => handleSelectOption('message')} isSelected={activeTab === 'message'}/>
-                <NavBarOption icon={MegaphoneIcon} onClickAction={() => handleSelectOption('edit message')} isSelected={activeTab === 'edit message'}/>
+                <NavBarOption icon={AvatarIcon} iconAlt="avatar" onClickAction={() => handleSelectOption('account')} border isSelected={activeTab === 'account'}/>
+                <NavBarOption icon={DashboardIcon} iconAlt="dashboard" onClickAction={() => handleSelectOption('dashboard')} isSelected={activeTab === 'dashboard'}/>
+                <NavBarOption icon={MessageIcon} iconAlt="messages" onClickAction={() => handleSelectOption('message')} isSelected={activeTab === 'message'}/>
+                <NavBarOption icon={MegaphoneIcon} iconAlt="edit message" onClickAction={() => handleSelectOption('edit message')} isSelected={activeTab === 'edit message'}/>
             </div>
             <div>
-                <NavBarOption icon={SettingIcon} onClickAction={() => handleSelectOption('settings')} isSelected={activeTab === 'settings'}/>
+                <NavBarOption icon={SettingIcon} iconAlt="settings" onClickAction={() => handleSelectOption('settings')} isSelected={activeTab === 'settings'}/>
             </div>
         </div>
     )

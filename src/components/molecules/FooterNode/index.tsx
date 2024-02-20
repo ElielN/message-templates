@@ -27,7 +27,8 @@ export const FooterNode = () => {
     return (
         <div className={`footer-node node-default ${!nodeEnabled ? 'disabled' : ''}`}>
             <ToggleField
-                icon={TextIcon} 
+                icon={TextIcon}
+                iconAlt="Add footer text"
                 tip="" 
                 title="Footer text"
                 toggleAction={() => dispatch(toggleNode('footerNode'))}

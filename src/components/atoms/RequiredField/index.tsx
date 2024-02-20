@@ -3,12 +3,14 @@ import './styles.scss'
 
 type RequiredFieldProps = {
     icon: string
+    iconAlt: string
     title: string
     tip: string
 }
 
 export const RequiredField = ({
     icon,
+    iconAlt,
     title,
     tip
 }: RequiredFieldProps) => {

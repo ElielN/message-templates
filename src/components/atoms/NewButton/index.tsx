@@ -22,7 +22,7 @@ export const NewButton = ({ onDelete, idx }: NewButtonProps) => {
     return (
         <div className='new-button'>
             <div>
-                Button 1
+                Button {idx + 1}
                 <img src={DeleteIcon} alt="" onClick={onDelete}/>
             </div>
             <div>
