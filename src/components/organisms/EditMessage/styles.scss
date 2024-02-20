@@ -8,6 +8,7 @@
     scrollbar-width: none;
     transform: translateX(-22.5rem);
     transition: transform 1s ease-in-out;
+    background: var(--white);
 
     &.active {
         transform: translateX(0);
@@ -50,5 +51,21 @@
         gap: 0.75rem;
         background: var(--white);
         border-top: 1px solid var(--black-12);
+    }
+
+    @media (orientation: portrait) {
+        transform: translateX(0) translateY(100%);
+        border-top: 1px solid var(--black-12);
+        border-right: none;
+        border-radius: 1rem;
+        width: 100%;
+
+        &.active {
+            transform: translateY(0);
+        }
+
+        > div:last-of-type {
+            flex-direction: row;
+        }
     }
 }
