@@ -208,3 +208,13 @@ div, header, main {
         }
     }
 }
+
+.Toastify {
+    --toastify-toast-width: 20rem;
+    > div:first-of-type {
+        flex-direction: column;
+    }
+    > div:last-of-type {
+        font-size: 1rem;
+    }
+}

@@ -8,7 +8,7 @@ import './styles.scss'
 import { useSelector } from 'react-redux'
 import { RootState, zustandStore } from '@/lib/store'
 import { useDispatch } from 'react-redux'
-import { changeTab } from '@/lib/slices/statesSlice'
+import { changeTab, clearFields, deleteMessage } from '@/lib/slices/statesSlice'
 
 
 export const EditMessage = () => {
@@ -19,6 +19,11 @@ export const EditMessage = () => {
 
     const handleSave = () => {
         saveMessage(nodes);
+        dispatch(clearFields())
+    }
+
+    const handleDelete = () => {
+        dispatch(deleteMessage())
     }
     
     return (
@@ -33,7 +38,7 @@ export const EditMessage = () => {
             </div>
             <div>
                 <Button onClick={handleSave}>SAVE</Button>
-                <Button negative>DELETE</Button>
+                <Button onClick={handleDelete} negative>DELETE</Button>
             </div>
         </div>
     )

@@ -1,5 +1,6 @@
-import { activeTabActionType, changeTextActionType, nodeStatesType, nodeTextStatesType, toggleNodeActionType } from "@/interfaces/statesSlice";
+import { activeTabActionType, setNodeTextActionType, nodeStatesType, nodeTextStatesType, toggleNodeActionType } from "@/interfaces/statesSlice";
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
+import { toast } from "react-toastify";
 
 const statesSlice = createSlice({
     name: 'states',
@@ -34,13 +35,13 @@ const statesSlice = createSlice({
         toggleNode: (state, action: PayloadAction<toggleNodeActionType>) => {
             state.nodes[action.payload as keyof nodeStatesType].active = !state.nodes[action.payload as keyof nodeStatesType].active
         },
-        changeText: (state, action: PayloadAction<{node: changeTextActionType, value: string}>) => {
+        setNodeText: (state, action: PayloadAction<{node: setNodeTextActionType, value: string}>) => {
             state.nodes[action.payload.node as keyof nodeTextStatesType].text = action.payload.value
         },
-        changeHeaderImage: (state, action: PayloadAction<string>) => {
+        setHeaderImage: (state, action: PayloadAction<string>) => {
             state.nodes.headerNode.file = action.payload
         },
-        changeButtonText: (state, action: PayloadAction<{idx: number, value: string}>) => {
+        setButtonText: (state, action: PayloadAction<{idx: number, value: string}>) => {
             state.nodes.buttonsNode.buttons[action.payload.idx].text = action.payload.value
         },
         addButton: (state) => {
@@ -51,7 +52,7 @@ const statesSlice = createSlice({
             const array = state.nodes.buttonsNode.buttons.filter((b, idx) => idx !== action.payload);
             state.nodes.buttonsNode.buttons = array
         },
-        deleteNode: (state) => {
+        deleteMessage: (state) => {
             state.nodes = {
                 headerNode: {
                     active: false,
@@ -71,6 +72,13 @@ const statesSlice = createSlice({
                     buttons: [],
                 }
             }
+            toast.success('Message deleted successfully!');
+        },
+        clearFields: (state) => {
+            state.nodes.bodyNode.text = ''
+            state.nodes.buttonsNode.buttons = []
+            state.nodes.footerNode.text = ''
+            state.nodes.headerNode.file = ''
         },
         changeTab: (state, action: PayloadAction<activeTabActionType>) => {
             state.activeTab.tab = action.payload
@@ -78,6 +86,6 @@ const statesSlice = createSlice({
     }
 })
 
-export const { toggleNode, changeText, changeHeaderImage, changeTab, deleteNode, addButton, deleteButton, changeButtonText } = statesSlice.actions
+export const { toggleNode, setNodeText, setHeaderImage, changeTab, deleteMessage, addButton, deleteButton, setButtonText, clearFields } = statesSlice.actions
 
 export default statesSlice.reducer

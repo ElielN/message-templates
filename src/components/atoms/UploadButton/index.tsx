@@ -1,7 +1,7 @@
 import { ChangeEvent, ReactNode } from 'react';
 import './styles.scss';
 import { useDispatch } from 'react-redux';
-import { changeHeaderImage } from '@/lib/slices/statesSlice';
+import { setHeaderImage } from '@/lib/slices/statesSlice';
 
 type LabelProps = {
     children: ReactNode
@@ -16,7 +16,7 @@ export const UploadButton = ({children}: LabelProps) => {
             const reader = new FileReader();
 
             reader.onload = function () {
-                dispatch(changeHeaderImage(reader.result as string))
+                dispatch(setHeaderImage(reader.result as string))
             }
 
             if (image) {

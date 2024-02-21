@@ -1,8 +1,8 @@
-import DeleteIcon from '@/assets/icons/delete-outline.svg'
-import './styles.scss'
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { changeButtonText } from '@/lib/slices/statesSlice'
+import { setButtonText } from '@/lib/slices/statesSlice'
+import DeleteIcon from '@/assets/icons/delete-outline.svg'
+import './styles.scss'
 
 type NewButtonProps = {
     onDelete: () => void
@@ -15,7 +15,7 @@ export const NewButton = ({ onDelete, idx }: NewButtonProps) => {
     const maxLength = 24
 
     const handleOnChange = (value: string) => {
-        dispatch(changeButtonText({value: value, idx: idx}))
+        dispatch(setButtonText({value: value, idx: idx}))
         setCount(value.length)
     }
 

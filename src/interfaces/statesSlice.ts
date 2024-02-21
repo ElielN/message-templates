@@ -31,6 +31,6 @@ export type nodeTextStatesType = {
 
 export type toggleNodeActionType = 'headerNode' | 'footerNode' | 'buttonsNode'
 
-export type changeTextActionType = 'footerNode' | 'bodyNode'
+export type setNodeTextActionType = 'footerNode' | 'bodyNode'
 
 export type activeTabActionType = 'edit message' | 'dashboard' | 'message' | 'account' | 'settings' | ''
